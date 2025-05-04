@@ -12,6 +12,11 @@ module Tailwindcss
       end
     end
 
+    initializer "tailwindcss.include_builds_path" do
+      # Include Tailwind CSS build outputs in Rails asset paths
+      Rails.application.config.assets.paths << Rails.root.join("app/assets/builds")
+    end
+
     config.app_generators do |g|
       g.template_engine :tailwindcss
     end
