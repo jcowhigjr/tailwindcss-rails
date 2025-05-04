@@ -30,6 +30,7 @@
   * [Class names must be spelled out](#class-names-must-be-spelled-out)
   * [`ERROR: Cannot find the tailwindcss executable` for supported platform](#error-cannot-find-the-tailwindcss-executable-for-supported-platform)
   * [Using asset-pipeline assets](#using-asset-pipeline-assets)
+  * [Asset path configuration with Propshaft](#asset-path-configuration-with-propshaft)
 - [License](#license)
 
 <!-- tocstop -->
@@ -483,6 +484,12 @@ The inline version also works:
 ```html
 <section class="bg-[url('image.svg')]">Has the image as it's background</section>
 ```
+
+### Asset path configuration with Propshaft
+
+When using Propshaft as your asset pipeline, the gem automatically adds `app/assets/builds` to your Rails asset paths. This ensures that Tailwind CSS output files are served correctly without requiring manual configuration in your application.
+
+If you're manually configuring asset paths with Propshaft, be aware that this is handled for you by the gem's engine initializer.
 
 ## License
 

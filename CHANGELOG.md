@@ -1,5 +1,11 @@
 # `tailwindcss-rails` Changelog
 
+## Unreleased
+
+### Added
+
+* Added default `app/assets/builds` path to Rails asset paths in the engine initializer. This ensures generated CSS in builds folder is served without manual configuration.
+
 ## v4.2.3 / 2025-05-02
 
 ### Improved
